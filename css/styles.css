@@ -313,7 +313,7 @@ nav h1 a {
 }
 
 /* ====================== OFFLINE PAGE ====================== */
-/* #offline-page {
+#offline-page {
   background-color: white;
 }
 
@@ -330,7 +330,7 @@ nav h1 a {
 
 #offline-page section img {
   width: 100%;
-} */
+}
 
 @media only screen and (min-width: 768px) {  
   #restaurants-list li {
