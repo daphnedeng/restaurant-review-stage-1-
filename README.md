@@ -1,4 +1,4 @@
-# Restaurant Reviews App Stage 1
+# Restaurant Reviews App (v1)
 ---
 ## Project Summary:
 
