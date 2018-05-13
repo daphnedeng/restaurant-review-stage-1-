@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Restaurant Reviews</title>
+</head>
+
+<body>
+  <header>
+    <nav role="navigation">
+      <a href="#neighborhoods-select" class="skip-link">Skip to main content</a>
+      <h1><a href="/">Restaurant Reviews</a></h1>
+    </nav>
+  </header>
+
+  <main id="maincontent" role="main">
+    <section id="map-container" aria-label="google map">
+      <div id="map"></div>
+    </section>    
+    <div class="filter-options">
+      <h2>Filter Results</h2>
+      <select id="neighborhoods-select" name="neighborhoods" aria-label="Select Restaurant Neighborhood" onchange="updateRestaurants()">
+        <option value="all">All Neighborhoods</option>
+      </select>
+      <select id="cuisines-select" name="cuisines" aria-label="Select Cusisine" onchange="updateRestaurants()">
+        <option value="all">All Cuisines</option>
+      </select>
+    </div>
+    <section>
+      <ul id="restaurants-list" role="list"></ul>
+    </section>
+  </main>
+
+  <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
+  <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7zYapulQigUx8hpivWNoNQzFVbOOxQO4&libraries=places&callback=initMap"></script>
+  <script>
+    if ('serviceWorker' in navigator) {    
+      navigator.serviceWorker.register('/sw.js')
+        .then(registration=> {
+          console.log("Registered successfully: ", registration.scope);
+        })
+        .catch(err=> {        
+          console.log("Registration failed: ", err);
+        })
+    };
+  </script>
+
+  <footer id="footer">
+    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+  </footer>
+
+</body>
+
+</html>
