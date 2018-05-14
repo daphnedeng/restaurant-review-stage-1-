@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
   <link rel="stylesheet" href="css/styles.css">
   <title>Restaurant Reviews</title>
 </head>
@@ -18,7 +18,7 @@
 
   <main id="maincontent" role="main">
     <section id="map-container" aria-label="google map">
-      <div id="map"></div>
+      <div id="map" role="application"></div>
     </section>    
     <div class="filter-options">
       <h2>Filter Results</h2>
@@ -29,7 +29,7 @@
         <option value="all">All Cuisines</option>
       </select>
     </div>
-    <section>
+    <section aria-label="List of restaurants">
       <ul id="restaurants-list" role="list"></ul>
     </section>
   </main>

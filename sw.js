@@ -1,6 +1,6 @@
 'use strict';
 
-let currentVersion = 'review-v999';
+let currentVersion = 'review-v777';
 
 //install the files to be access offline
 self.addEventListener('install', event => {
@@ -31,15 +31,26 @@ self.addEventListener('install', event => {
     );
 });
 
-//if the user is offline, then return the visited page from cache. 
-self.addEventListener('fetch', event => {  
+//render pages even the user is offline
+self.addEventListener('fetch', event => {
+    const url = new URL(event.request.url);
+    //these pages are individual resaurant.html?id=x
+    if (url.pathname.startsWith('/restaurant.html')) {
+        event.respondWith(
+            caches.match('restaurant.html')
+            .then(response => {
+                return response || fetch(event.request)
+            })
+        );
+        return;
+    }  
     event.respondWith(  
       caches.match(event.request).then(response => {  
             // Cache hit - return response  
             return response || fetch(event.request);
         }) 
     );  
-});  
+});
 
 //update service worker
 self.addEventListener('activate', event => 
