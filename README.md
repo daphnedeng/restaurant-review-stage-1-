@@ -1,5 +1,5 @@
 # Restaurant Reviews App (v1)
----
+
 ## Project Summary:
 
 In this **Restaurant Reviews** project, I converted a static webpage to a mobile-ready web application, implemented accessibility and added a service worker to create a seamless offline experience for users.
