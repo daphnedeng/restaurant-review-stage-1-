@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,18 +44,7 @@
   <script type="text/javascript" src="js/dbhelper.js"></script>
   <script type="text/javascript" src="js/restaurant_info.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7zYapulQigUx8hpivWNoNQzFVbOOxQO4&libraries=places&callback=initMap"></script> 
-  <script src="sw.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {    
-      navigator.serviceWorker.register('/sw.js')
-        .then(registration=> {
-          console.log("Registered successfully: ", registration.scope);
-        })
-        .catch(err=> {        
-          console.log("Registration failed: ", err);
-        })
-    };
-  </script>
+  <script type="text/javascript" src="sw_reg.js"></script>
 </body>
 
 </html>

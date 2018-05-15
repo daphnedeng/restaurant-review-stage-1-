@@ -1,6 +1,6 @@
- 'use strict';
+'use strict';
 
-let currentVersion = 'review-v777';
+let currentVersion = 'review-v666';
 
 //install the files to be access offline
 self.addEventListener('install', event => {
@@ -9,6 +9,7 @@ self.addEventListener('install', event => {
         caches.open(currentVersion).then(cache => {
             return cache.addAll([
                 '/',
+                '/sw_reg.js',
                 '/index.html',
                 '/restaurant.html',
                 '/css/styles.css',
