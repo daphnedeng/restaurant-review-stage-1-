@@ -11,7 +11,7 @@ In this **Restaurant Reviews** project, I converted a static webpage to a mobile
 3. With your server running, open Chrome, visit the site: `http://localhost:8000`.
 4. Resize your browser to check the responsiveness.
 5. To change your connection, right click "inspect" > "network" > check "Offline".
-![check Offline](img/checkOffline.png)
+![check Offline](img/checkOffline.PNG)
 Navigate to any restaurant pages, they are rendered when there is no network access.
 
 ## Created with: 
